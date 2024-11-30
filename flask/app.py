@@ -4,8 +4,9 @@ app = Flask(__name__)
 
 activities = [
     {
-        "activity_name": "Regent's Park 10 k",
+
         "activity_id": 10008965,
+        "activity_name": "Regent's Park 10 k",
         "total_time": "60:17",
         "lap_times": [
             "10:02"
@@ -21,6 +22,7 @@ activities = [
 @app.get("/activity")
 def get_activity():
     return {"activities": activities}
+
 
 @app.route('/')
 def index():
